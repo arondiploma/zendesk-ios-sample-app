@@ -18,6 +18,9 @@ final class ZendeskChat {
     func initialize() {
         setChatLogging(isEnabled: true, logLevel: .verbose)
         Chat.initialize(accountKey: config.chatKey)
+        
+        let auth = JWTAuth()
+        Chat.instance?.setIdentity(authenticator: auth)
     }
 
     func setChatLogging(isEnabled: Bool, logLevel: LogLevel) {

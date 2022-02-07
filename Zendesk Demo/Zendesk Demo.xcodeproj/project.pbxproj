@@ -17,6 +17,7 @@
 		33A7A48A23CE140D00CCE25E /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A7A48923CE140D00CCE25E /* Configuration.swift */; };
 		33D497DE23CCB98500F1AA96 /* help_center_article_style.css in Resources */ = {isa = PBXBuildFile; fileRef = 33D497DD23CCB98500F1AA96 /* help_center_article_style.css */; };
 		B593C188DEE52AED7DA6559C /* Pods_Zendesk_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09DD487F407E30E44B20DA77 /* Pods_Zendesk_Demo.framework */; };
+		EBC9EBA527AD74CE004289B0 /* JWTAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC9EBA427AD74CE004289B0 /* JWTAuth.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		33A7A48923CE140D00CCE25E /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		33D497DD23CCB98500F1AA96 /* help_center_article_style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = help_center_article_style.css; sourceTree = "<group>"; };
 		E05279DCF7D2A20B1FFD1B44 /* Pods-Zendesk Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zendesk Demo.debug.xcconfig"; path = "Target Support Files/Pods-Zendesk Demo/Pods-Zendesk Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		EBC9EBA427AD74CE004289B0 /* JWTAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWTAuth.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 				331D740E23CC81EF0031DB42 /* HomeController.swift */,
 				331D741023CC81EF0031DB42 /* HelpController.swift */,
 				33135671252DC6FC007A19DA /* ZendeskChat.swift */,
+				EBC9EBA427AD74CE004289B0 /* JWTAuth.swift */,
 				331D741223CC81EF0031DB42 /* Main.storyboard */,
 				331D741523CC81F10031DB42 /* Assets.xcassets */,
 				331D741723CC81F10031DB42 /* LaunchScreen.storyboard */,
@@ -220,6 +223,7 @@
 				331D741123CC81EF0031DB42 /* HelpController.swift in Sources */,
 				33A7A48A23CE140D00CCE25E /* Configuration.swift in Sources */,
 				331D740F23CC81EF0031DB42 /* HomeController.swift in Sources */,
+				EBC9EBA527AD74CE004289B0 /* JWTAuth.swift in Sources */,
 				33135672252DC6FC007A19DA /* ZendeskChat.swift in Sources */,
 				331D740B23CC81EF0031DB42 /* AppDelegate.swift in Sources */,
 			);

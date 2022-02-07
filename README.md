@@ -75,22 +75,19 @@ static var script = """
 
 // Mobile SDK App ID
 // You can find this information at https://{subdomain}.zendesk.com/agent/admin/mobile_sdk
-static var appId = "b55b6fd786619ac0ade48d7e05fab485c4d1374054c85ddb"
+static var appId = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 // Mobile SDK Client ID
 // You can find this information at https://{subdomain}.zendesk.com/agent/admin/mobile_sdk
-static var clientId = "mobile_sdk_client_ee1265e9f9f8cacccbdb"
+static var clientId = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 // Zendesk URL
 // URL of your instance following the format https://{subdomain}.zendesk.com
 // PS: Do not include any additional path other than the main URL of your help center (do not add "/hc/en-us/...")
-static var zendeskUrl = "https://z3n-demobuilder.zendesk.com"
+static var zendeskUrl = "https://xxxxxx.zendesk.com"
 
-// Fake Identity Name (anonymous authentication)
-static var identityName = "John Doe"
-
-// Fake Identity Email (anonymous authentication)
-static var identityEmail = "johndoe@example.com"
+// JWT, any value
+static var identityUserToken = "johndoe@example.com"
 
 // Zendesk Talk Digital Line nickname
 // You can find this information at https://{subdomain}.zendesk.com/agent/admin/voice
@@ -99,8 +96,11 @@ static var digitalLine = "TestLine"
 // Zendesk Chat Account Key
 // You can find this information at https://{subdomain}.zendesk.com/chat/agent
 // Click on the avatar icon on the top-right side of the screen and select "Check connection"
-static var chatKey = "uDwUGy6SFx9fJEs3iIAsS1kozRa7u0GR"
+static var chatKey = "xxxxxxxxxxxxxxxxxx"
 
+// Chat JWT Provider
+static var chatJWTProvider = "https://xxxxxxxxxxxxxxxxxx"
+    
 // Add custom chat rating buttons? (Boolean: true / false)
 // IMPORTANT: This is not native on the Chat SDK UI. You can use it and present it as a custom feature.
 static var chatRating = false
@@ -128,6 +128,9 @@ Do not change any other file other than `Configuration.swift`, `help_center_arti
 [![](https://img.youtube.com/vi/mqjJ3LxLHY8/0.jpg)](https://www.youtube.com/watch?v=mqjJ3LxLHY8)
 
 ## CHANGELOG
+
+### 2022-02-02
+- Support JWT Auth for Support and Chat
 
 ### 2021-04-16
 

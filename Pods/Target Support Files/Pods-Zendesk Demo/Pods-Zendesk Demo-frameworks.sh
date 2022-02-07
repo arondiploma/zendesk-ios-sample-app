@@ -113,6 +113,7 @@ install_dsym() {
       rsync --delete -av "${RSYNC_PROTECT_TMP_FILES[@]}" --links --filter "- CVS/" --filter "- .svn/" --filter "- .git/" --filter "- .hg/" --filter "- Headers" --filter "- PrivateHeaders" --filter "- Modules" "${DERIVED_FILES_DIR}/${basename}.dSYM" "${DWARF_DSYM_FOLDER_PATH}"
     else
       # The dSYM was not stripped at all, in this case touch a fake folder so the input/output paths from Xcode do not reexecute this script because the file is missing.
+      mkdir -p "${DWARF_DSYM_FOLDER_PATH}"
       touch "${DWARF_DSYM_FOLDER_PATH}/${basename}.dSYM"
     fi
   fi
@@ -177,32 +178,32 @@ code_sign_if_enabled() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${PODS_ROOT}/TwilioVoice/Build/iOS/TwilioVoice.framework"
   install_framework "${PODS_ROOT}/ZendeskTalkSDK/TalkSDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/AnswerBotProvidersSDK/AnswerBotProvidersSDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/AnswerBotSDK/AnswerBotSDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ChatProvidersSDK/ChatProvidersSDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ChatSDK/ChatSDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/CommonUISDK/CommonUISDK.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskAnswerBotProvidersSDK/AnswerBotProvidersSDK.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskAnswerBotSDK/AnswerBotSDK.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskChatProvidersSDK/ChatProvidersSDK.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskChatSDK/ChatSDK.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskCommonUISDK/CommonUISDK.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskCoreSDK/ZendeskCoreSDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/MessagingAPI/MessagingAPI.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/MessagingSDK/MessagingSDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/SDKConfigurations/SDKConfigurations.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/SupportProvidersSDK/SupportProvidersSDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/SupportSDK/SupportSDK.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskMessagingAPISDK/MessagingAPI.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskMessagingSDK/MessagingSDK.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskSDKConfigurationsSDK/SDKConfigurations.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskSupportProvidersSDK/SupportProvidersSDK.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskSupportSDK/SupportSDK.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${PODS_ROOT}/TwilioVoice/Build/iOS/TwilioVoice.framework"
   install_framework "${PODS_ROOT}/ZendeskTalkSDK/TalkSDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/AnswerBotProvidersSDK/AnswerBotProvidersSDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/AnswerBotSDK/AnswerBotSDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ChatProvidersSDK/ChatProvidersSDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ChatSDK/ChatSDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/CommonUISDK/CommonUISDK.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskAnswerBotProvidersSDK/AnswerBotProvidersSDK.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskAnswerBotSDK/AnswerBotSDK.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskChatProvidersSDK/ChatProvidersSDK.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskChatSDK/ChatSDK.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskCommonUISDK/CommonUISDK.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskCoreSDK/ZendeskCoreSDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/MessagingAPI/MessagingAPI.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/MessagingSDK/MessagingSDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/SDKConfigurations/SDKConfigurations.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/SupportProvidersSDK/SupportProvidersSDK.framework"
-  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/SupportSDK/SupportSDK.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskMessagingAPISDK/MessagingAPI.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskMessagingSDK/MessagingSDK.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskSDKConfigurationsSDK/SDKConfigurations.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskSupportProvidersSDK/SupportProvidersSDK.framework"
+  install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskSupportSDK/SupportSDK.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
