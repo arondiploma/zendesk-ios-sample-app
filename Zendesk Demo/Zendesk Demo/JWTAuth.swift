@@ -17,7 +17,7 @@ final class JWTAuth: NSObject, JWTAuthenticator {
 
         // declare the parameter as a dictionary that contains string as key and value combination. considering inputs are valid
         
-        let parameters: [String: Any] = ["user_token": config.identityUserToken]
+        let parameters: [String: Any] = ["user_token": config.jwtUserToken]
         
         // create the url with URL
         let url = URL(string: config.chatJWTProvider)! // change server url accordingly

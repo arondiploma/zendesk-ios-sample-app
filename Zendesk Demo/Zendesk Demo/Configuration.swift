@@ -53,19 +53,28 @@ struct config {
 
     // Mobile SDK App ID
     // You can find this information at https://{subdomain}.zendesk.com/agent/admin/mobile_sdk
-    static var appId = "xxxxxxxxxxxx"
-
+    static var appId = "xxx2079b2ff044ccxxxxxxxx1b2cca65624d8455exxxxxxx"
+    
     // Mobile SDK Client ID
     // You can find this information at https://{subdomain}.zendesk.com/agent/admin/mobile_sdk
-    static var clientId = "xxxxxxx"
-
+    static var clientId = "mobile_sdk_client_xxxxxxxxxxxxxxxxxxxx"
+    
     // Zendesk URL
     // URL of your instance following the format https://{subdomain}.zendesk.com
     // PS: Do not include any additional path other than the main URL of your help center (do not add "/hc/en-us/...")
-    static var zendeskUrl = "https://xxxxxxxxxxx.zendesk.com"
+    static var zendeskUrl = "https://xxxxxx.zendesk.com"
 
+    // set the authentication type, value must ANONYMOUS or JWT only
+    static var authType = "JWT"
+    
+    // Fake Identity Name (anonymous authentication)
+    static var anonymousName = "John Doe"
+
+    // Fake Identity Email (anonymous authentication)
+    static var anonymousEmail = "johndoe@example.com"
+    
     // JWT, any value
-    static var identityUserToken = "test@gmail.com"
+    static var jwtUserToken = "xxxxxxxxxxx@example.com"
     
     // Zendesk Talk Digital Line nickname
     // You can find this information at https://{subdomain}.zendesk.com/agent/admin/voice
@@ -74,10 +83,10 @@ struct config {
     // Zendesk Chat Account Key
     // You can find this information at https://{subdomain}.zendesk.com/chat/agent
     // Click on the avatar icon on the top-right side of the screen and select "Check connection"
-    static var chatKey = "xxxxxxxxxxxx"
+    static var chatKey = "vihYtQM5lkjvTYJuXxxxxxxxxxxxxxxx"
 
     // Chat JWT Provider
-    static var chatJWTProvider = "https://vipecxsvse.execute-api.ap-southeast-1.amazonaws.com/dev/chat_sdk/jwt"
+    static var chatJWTProvider = "https://xxxxxxxxxx.execute-api.ap-southeast-1.amazonaws.com/xxxx/chat_sdk/jwt"
     
     // Add custom chat rating buttons? (Boolean: true / false)
     // IMPORTANT: This is not native on the Chat SDK UI. You can use it and present it as a custom feature.
@@ -95,60 +104,3 @@ struct config {
 // DO NOT CHANGE ANYTHING ON ANY OTHER FILE UNLESS YOU KNOW WHAT YOU'RE DOING //
 ////////////////////////////////////////////////////////////////////////////////
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

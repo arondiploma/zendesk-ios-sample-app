@@ -33,10 +33,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                            clientId: config.clientId,
                            zendeskUrl: config.zendeskUrl)
         
-        // Set Fake Identity
-        let identity = Identity.createJwt(token: config.identityUserToken)
-        Zendesk.instance?.setIdentity(identity)
-
+        if(config.authType == "ANONYMOUS"){
+            // Set Fake Identity
+            let identity = Identity.createAnonymous(name: config.anonymousName, email: config.anonymousEmail)
+            Zendesk.instance?.setIdentity(identity)
+        }else{
+            // Set Fake Identity
+            let identity = Identity.createJwt(token: config.jwtUserToken)
+            Zendesk.instance?.setIdentity(identity)
+        }
+        
         Support.initialize(withZendesk: Zendesk.instance)
 
         // Initialize Answer Bot with instances of Zendesk and Support singletons
