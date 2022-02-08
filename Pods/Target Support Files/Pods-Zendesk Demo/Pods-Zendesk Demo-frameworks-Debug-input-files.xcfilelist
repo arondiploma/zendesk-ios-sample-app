@@ -1,14 +1,10 @@
 ${PODS_ROOT}/Target Support Files/Pods-Zendesk Demo/Pods-Zendesk Demo-frameworks.sh
-${PODS_ROOT}/TwilioVoice/Build/iOS/TwilioVoice.framework
-${PODS_ROOT}/ZendeskTalkSDK/TalkSDK.framework
-${PODS_XCFRAMEWORKS_BUILD_DIR}/AnswerBotProvidersSDK/AnswerBotProvidersSDK.framework/AnswerBotProvidersSDK
-${PODS_XCFRAMEWORKS_BUILD_DIR}/AnswerBotSDK/AnswerBotSDK.framework/AnswerBotSDK
-${PODS_XCFRAMEWORKS_BUILD_DIR}/ChatProvidersSDK/ChatProvidersSDK.framework/ChatProvidersSDK
-${PODS_XCFRAMEWORKS_BUILD_DIR}/ChatSDK/ChatSDK.framework/ChatSDK
-${PODS_XCFRAMEWORKS_BUILD_DIR}/CommonUISDK/CommonUISDK.framework/CommonUISDK
-${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskCoreSDK/ZendeskCoreSDK.framework/ZendeskCoreSDK
-${PODS_XCFRAMEWORKS_BUILD_DIR}/MessagingAPI/MessagingAPI.framework/MessagingAPI
-${PODS_XCFRAMEWORKS_BUILD_DIR}/MessagingSDK/MessagingSDK.framework/MessagingSDK
-${PODS_XCFRAMEWORKS_BUILD_DIR}/SDKConfigurations/SDKConfigurations.framework/SDKConfigurations
-${PODS_XCFRAMEWORKS_BUILD_DIR}/SupportProvidersSDK/SupportProvidersSDK.framework/SupportProvidersSDK
-${PODS_XCFRAMEWORKS_BUILD_DIR}/SupportSDK/SupportSDK.framework/SupportSDK
+${PODS_XCFRAMEWORKS_BUILD_DIR}/Zendesk/ZendeskSDK.framework/ZendeskSDK
+${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskSDKConversationKit/ZendeskSDKConversationKit.framework/ZendeskSDKConversationKit
+${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskSDKFayeClient/ZendeskSDKFayeClient.framework/ZendeskSDKFayeClient
+${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskSDKHTTPClient/ZendeskSDKHTTPClient.framework/ZendeskSDKHTTPClient
+${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskSDKLogger/ZendeskSDKLogger.framework/ZendeskSDKLogger
+${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskSDKMessaging/ZendeskSDKMessaging.framework/ZendeskSDKMessaging
+${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskSDKSocketClient/ZendeskSDKSocketClient.framework/ZendeskSDKSocketClient
+${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskSDKStorage/ZendeskSDKStorage.framework/ZendeskSDKStorage
+${PODS_XCFRAMEWORKS_BUILD_DIR}/ZendeskSDKUIComponents/ZendeskSDKUIComponents.framework/ZendeskSDKUIComponents
